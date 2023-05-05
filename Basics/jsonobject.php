@@ -15,7 +15,7 @@
   <pre id="json"></pre>
   <h2>We can send use this in our php code and parse it just the same</h2>
 
-  <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="POST">
+  <form action=<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?> method="POST">
 
     <!-- We can use hidden fields to send data on a button press... ofc, dont put in credentials or keys -->
     <input type="text" id="name" placeholder="name" name="name" value="Kareem" hidden></input>
